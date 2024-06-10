@@ -2,7 +2,7 @@
 Eksamen 2024 i driftstøtte, brukerstøtte og utvikling.
 
 ### Om prosjektet
-<b>IP: http://kakon</b>
+<b>IP: http://hakon</b>
 
 Programmet er 
 
@@ -19,7 +19,7 @@ Når det kommer til frontend, bruker programmet HTML og CSS. I backend bruker pr
 
 ``etter_regristrering.php`` → 
 
-``main.js`` → JavaScript koblet til ``index.html``. Scriptet kjører både ``getData.php`` og ``deleteData.php``.
+``main.js`` → 
 
 ### Spesifikasjoner
 Hvilke spesifikasjoner du burde ha på serveren/containeren din for å kjøre programmet.
