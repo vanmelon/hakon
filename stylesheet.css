@@ -1,0 +1,164 @@
+html, body{
+    width: 100%;
+    margin: 0;
+}
+/* dette er nav baren */
+.topp {
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    background-color: rgb(70, 100, 60);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr;
+}
+#bruker_ikon {
+    grid-column-start:9 ;
+    width: 35px;
+    height: 35px;
+    margin: 3px;
+}
+
+#log_inn {
+    grid-column-start:8 ;
+    grid-row-start: 1;
+    margin: 3px;
+    height: 35px;
+    margin-bottom: 6px;
+    background: #303030b2;
+    color: #3ea6ff;
+    border-radius: 20px;
+    text-align: center;
+}
+
+#sok_ikon{
+    grid-column-start:2;
+    grid-row-start: 1;
+    margin-top: 3px;
+    margin-left: 140px;
+    height: 35px;
+    padding-top: 2px;
+}
+/*søke fungsjonen*/
+#sok-gruppe{
+    grid-column-start:3 ;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    display: block;
+    margin-top: 3px;
+    height: 35px;
+    padding-top: 2px;
+}
+    #searchInputID{
+        width: 200px;
+        height: 26px;
+    }
+    #searchButtonID{
+        width: 90px;
+        height: 32px;
+        text-transform: uppercase;
+    }
+
+#Hamburger_icon{
+    grid-column-start:1;
+    grid-row-start: 1;
+    margin-top: 3px;
+    width: 35px;
+    height: 35px;
+    padding-top: 2px;
+}
+/*dettet er hvor bildene er i ett grid*/
+.hoved {
+    height: 100%;
+    display: grid;
+    background-color: #061e0e;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid black; 
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+
+/* Tekst over bildene */
+.bilde footer {
+    position: sticky;
+}
+
+[class^="textOverBildetCLASS"] {
+    width: 100%;
+    text-align: left;
+    background: rgba(68, 70, 32, 0.35);
+    position: absolute;
+    bottom: 0;
+    border-radius: 2px;
+}
+
+[class^="textOverBildetCLASS"] h2 {
+    font-size: 30px;
+    margin: 2px;
+}
+
+[class^="textOverBildetCLASS"] h3 {
+    width: 95%;
+    font-size: 12px;
+    padding: 5px;
+    margin: 2px;
+}
+
+/* bildene av blomstrene + priser */
+
+/* Store bildet */
+.bilde {
+    grid-column: 3 / 5;
+    grid-row: 1 / 3;
+}
+
+.bilde img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.bilde h1 {
+    color: black;
+    position: absolute;
+    background: rgba(68, 70, 32, 0.35);
+    border-radius: 10px;
+    padding: 3px 5px;
+    font-size: 60px;
+}
+
+/* Små bilder */
+[class^="test_"] {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+[class^="test_"] img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+[class^="test_"] h1 {
+    color: black;
+    background: rgba(68, 70, 32, 0.35);
+    position: absolute;
+    border-radius: 10px;
+    padding: 3px 5px;
+    font-size: 40px;
+}
+
+.test_1 { grid-column: 1; grid-row: 1; }
+.test_2 { grid-column: 2; grid-row: 1; }
+.test_3 { grid-column: 1; grid-row: 2; }
+.test_4 { grid-column: 2; grid-row: 2; }
+.test_5 { grid-column: 1; grid-row: 3; }
+.test_6 { grid-column: 2; grid-row: 3; }
+.test_7 { grid-column: 3; grid-row: 3; }
+.test_8 { grid-column: 4; grid-row: 3; }
+.test_9 { grid-column: 1; grid-row: 4; }
+.test_10 { grid-column: 2; grid-row: 4; }
+.test_11 { grid-column: 3; grid-row: 4; }
+.test_12 { grid-column: 4; grid-row: 4; }

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blomster Butikk</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="soke-knapp.js"></script>
+    <script src="mus-over-bilde.js"></script>
+</head>
+<body>
+    <!-- Nav bar -->
+    <div class="topp">
+        <img src="bilder/ikoner/bruker.png" alt="bruker_icon" id="bruker_ikon">
+        <img src="bilder/ikoner/sok.png" alt="søk_knap" id="sok_ikon">
+        <div id="sok-gruppe">
+            <input type="text" id="searchInputID" placeholder="Søk etter blomst">
+            <button id="searchButtonID">Søk</button>
+        </div>
+        <a href="log_inn_side.php" id="log_inn">
+        <button  >Logg inn</button>
+        </a>
+        <img src="bilder/ikoner/Hamburger_icon.svg.png" alt="Hamburger_icon" id="Hamburger_icon">
+    </div>
+
+    <!-- Grid system -->
+    <div class="hoved">
+        <div class="bilde" onmouseover="bigImg(this)&textOverBildet()" onmouseout="normalImg(this)&textOverBildet()" id="orkide">
+            <h1>699 kr</h1>
+            <img src="bilder/blomster/orkide.png.jpg" alt="orkide">
+            <footer>
+                <div class="textOverBildetCLASS">
+                    <h2>Orkidé</h2>
+                    <h3>Orkidéer er eksotiske blomster med delikate former og farger. De er populære som prydplanter og har unike strukturer med tre kronblader og tre kronblader.</h3>
+                </div>
+            </footer>
+        </div>
+
+        <div class="test_1" onmouseover="bigImg(this)&textOverBildet()" onmouseout="normalImg(this)&textOverBildet()" id="margeritt">
+            <h1>349 kr</h1>
+            <img src="bilder/blomster/margeritt_blå.png" alt="margeritt">
+            <footer>
+                <div class="textOverBildetCLASS">
+                    <h2>Margeritt</h2>
+                    <h3>Margeritter er enkle og vakre blomster med hvite kronblader og gule midtpunkter. De er populære prydplanter i hager og symboliserer uskyld og enkelhet.</h3>
+                </div>
+            </footer>
+        </div>
+
+        <div class="test_2" onmouseover="bigImg(this)&textOverBildet()" onmouseout="normalImg(this)&textOverBildet()" id="eukalyptus">
+            <h1>449 kr</h1>
+            <img src="bilder/blomster/eukalyptus_grein.png" alt="eukalyptus">
+            <footer>
+                <div class="textOverBildetCLASS">
+                    <h2>Eukalyptus</h2>
+                    <h3>Eukalyptus er en variasjonsrik slekt av trær og busker, kjent for aromatiske blader som brukes i medisin og oljeekstraksjon. De er innfødte i Australia og trives i tørre klima.</h3>
+                </div>
+            </footer>
+        </div>
+
+        <div class="test_3" onmouseover="bigImg(this)&textOverBildet()" onmouseout="normalImg(this)&textOverBildet()" id="hage_tulipan">
+            <h1>449 kr</h1>
+            <img src="bilder/blomster/hage_tulipaner_rød_hvit.png" alt="hage_tulipaner">
+            <footer>
+                <div class="textOverBildetCLASS">
+                    <h2>Hage Tulipaner</h2>
+                    <h3>Hagetulipaner er vårlige løkplanter med fargerike blomster. De finnes i ulike former og nyanser, og er populære for vårblomsterbed og snittblomsterarrangementer.</h3>
+                </div>
+            </footer>
+        </div>
+
+        <div class="test_4" onmouseover="bigImg(this)&textOverBildet()" onmouseout="normalImg(this)&textOverBildet()" id="lilla_tulipaner">
+            <h1>399 kr</h1>
+            <img src="bilder/blomster/lilla_tulipaner.png" alt="lilla_tulipaner">
+            <footer>
+                <div class="textOverBildetCLASS">
+                    <h2>Lilla Tulipaner</h2>
+                    <h3>Lilla tulipaner er en vakker variasjon av vårblomster med dypt fiolette kronblader. De legger en herlig fargeprang til hager og blomsterarrangementer om våren.</h3>
+                </div>
+            </footer>
+        </div>
+
+        <div class="test_5" onmouseover="bigImg(this)&textOverBildet()" onmouseout="normalImg(this)&textOverBildet()" id="orange_blomsterbukett">
+            <h1>399 kr</h1>
+            <img src="bilder/blomster/orange_blomsterbukett.png" alt="orange_blomsterbukett">
+            <footer>
+                <div class="textOverBildetCLASS">
+                    <h2>Orange Blomsterbukett</h2>
+                    <h3>En bukett med orange roser er en livlig og lidenskapelig gest. Oransje roser symboliserer entusiasme, takknemlighet og beundring, og gir en varm og livlig atmosfære til ethvert arrangement.</h3>
+                </div>
+            </footer>
+        </div>
+
+        <div class="test_6" onmouseover="bigImg(this)&textOverBildet()" onmouseout="normalImg(this)&textOverBildet()" id="pion_rosa">
+            <h1>549 kr</h1>
+            <img src="bilder/blomster/pion_rosa.png" alt="pion_rosa">
+            <footer>
+                <div class="textOverBildetCLASS">
+                    <h2>Rosa Pioner</h2>
+                    <h3>Rosa pioner er delikate og sjarmerende blomster som symboliserer kjærlighet, femininitet og godhet. De tilfører romantisk sjarm og skjønnhet til hager og blomsteroppsatser.</h3>
+                </div>
+            </footer>
+        </div>
+
+        <div class="test_7" onmouseover="bigImg(this)&textOverBildet()" onmouseout="normalImg(this)&textOverBildet()" id="red_tulipan">
+            <h1>499 kr</h1>
+            <img src="bilder/blomster/red_tulipan.png" alt="red_tulipan">
+            <footer>
+                <div class="textOverBildetCLASS">
+                    <h2>Røde Tulipaner</h2>
+                    <h3>Røde tulipaner er symboler på kjærlighet og lidenskap. Deres livlige farge og elegante form gjør dem populære i hageplanter og blomsterarrangementer. De utstråler romantikk og følelser.</h3>
+                </div>
+            </footer>
+        </div>
+
+        <div class="test_8" onmouseover="bigImg(this)&textOverBildet()" onmouseout="normalImg(this)&textOverBildet()" id="pioner">
+            <h1>399 kr</h1>
+            <img src="bilder/blomster/pioner.png" alt="pioner">
+            <footer>
+                <div class="textOverBildetCLASS">
+                    <h2>Pioner</h2>
+                    <h3>Pioner er prangende, flerårige blomsterplanter som produserer store og fargerike blomster. De er høyt verdsatt for sin skjønnhet og symbolske betydning, inkludert velstand og lykke.</h3>
+                </div>
+            </footer>
+        </div>
+
+        <div class="test_9" onmouseover="bigImg(this)&textOverBildet()" onmouseout="normalImg(this)&textOverBildet()" id="rød_blomsterbukett">
+            <h1>599 kr</h1>
+            <img src="bilder/blomster/rød_blomsterbukett.png" alt="rød_blomsterbukett">
+            <footer>
+                <div class="textOverBildetCLASS">
+                    <h2>Rød Blomsterbukett</h2>
+                    <h3>En rød blomsterbukett er lidenskapelig og dristig. Røde blomster, som roser og tulipaner, symboliserer kjærlighet og lidenskap, og skaper en vakker og følelsesladd gave.</h3>
+                </div>
+            </footer>
+        </div>
+
+        <div class="test_10"onmouseover="bigImg(this)&textOverBildet()" onmouseout="normalImg(this)&textOverBildet()" id="rosa_nelikk">
+        <h1>499 kr</h1>
+        <img src="bilder/blomster/rosa_nelikk.png" alt="flower_and_green">
+            <footer> 
+                <div class="textOverBildetCLASS"> 
+                    <h2>tulipan praglete</h2>
+                    <h3>
+                        Tulipaner i praglete farger er blendende og levende. 
+                        Deres flerfargede kronblader gir en frodig og festlig atmosfære i hager og blomsterarrangementer.</h3>
+                </div>
+            </footer>
+        </div>
+
+        <div class="test_11"onmouseover="bigImg(this)&textOverBildet()" onmouseout="normalImg(this)&textOverBildet()" id="tulipan_spraglete_hvit_rosa">
+            <h1>349 kr</h1>
+            <img src="bilder/blomster/tulipan_spraglete_hvit_rosa.png" alt="blue_flower">
+            <footer> 
+                <div class="textOverBildetCLASS"> 
+                    <h2>tulipan praglete</h2>
+                    <h3>
+                        Tulipaner i praglete farger er blendende og levende. 
+                        Deres flerfargede kronblader gir en frodig og festlig atmosfære i hager og blomsterarrangementer.</h3>
+                </div>
+            </footer>
+        </div>
+
+        <div class="test_12"onmouseover="bigImg(this)&textOverBildet()" onmouseout="normalImg(this)&textOverBildet()" id="vanilje_blomst">
+            <h1>449 kr</h1>
+            <img src="bilder/blomster/vanilje_blomst.png" alt="orange_flower">
+             <footer> 
+                <div class="textOverBildetCLASS"> 
+                    <h2>vanilje blomst</h2>
+                    <h3>
+                        Vaniljeblomsten er en eksotisk orkide som produserer de aromatiske vaniljestengene.
+                         Blomstene er gulgrønne, duftende og pollineres ofte for hånd i kommersiell produksjon.</h3>
+                </div>
+            </footer>
+        </div>
+
+    </div>
+
+</body>
+</html>
