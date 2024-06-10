@@ -1,3 +1,8 @@
+<?php
+session_start();
+$loggedIn = isset($_SESSION['user_email']);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,9 +23,13 @@
             <input type="text" id="searchInputID" placeholder="Søk etter blomst">
             <button id="searchButtonID">Søk</button>
         </div>
-        <a href="log_inn_side.php" id="log_inn">
-        <button  >Logg inn</button>
-        </a>
+        <?php if ($loggedIn): ?>
+            <span id="user_email"><?= $_SESSION['user_email'] ?></span>
+        <?php else: ?>
+            <a href="login.php" id="log_in">
+                <button>Logg inn</button>
+            </a>
+        <?php endif; ?>
         <img src="bilder/ikoner/Hamburger_icon.svg.png" alt="Hamburger_icon" id="Hamburger_icon">
     </div>
 
