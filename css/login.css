@@ -1,0 +1,60 @@
+/* Spesifikk styling for login siden */
+.login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    margin: 100px auto; /* Sentraliserer login containeren */
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: left;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: calc(100% - 20px); /* Juster bredde for å passe padding */
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.login-form input[type="submit"] {
+    padding: 10px 20px;
+    color: #fff;
+    background: linear-gradient(to right, #1a2412, #568203, #3f704d); /* Gradient bakgrunn */
+    border: none;
+    border-radius: 25px; /* Runde hjørner */
+    cursor: pointer;
+    width: 100%;
+}
+
+.login-form input[type="submit"]:hover {
+    background: linear-gradient(to right, #729c4f, #6da504, #4e9a63); /* Reversert gradient på hover */
+}
+
+.login-form p {
+    margin-top: 20px;
+    color: #333;
+}
+
+.login-form p a {
+    color: #729c4f; /* Farge for signup-lenken */
+    text-decoration: none;
+}
+
+.login-form p a:hover {
+    text-decoration: underline;
+}

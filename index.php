@@ -11,8 +11,8 @@ $loggedIn = isset($_SESSION['user_email']);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blomster Butikk</title>
     <link rel="stylesheet" href="stylesheet.css">
-    <script src="soke-knapp.js"></script>
-    <script src="mus-over-bilde.js"></script>
+    <script src="js/soke-knapp.js"></script>
+    <script src="js/mus-over-bilde.js"></script>
 </head>
 <body>
     <!-- Nav bar -->
@@ -27,7 +27,7 @@ $loggedIn = isset($_SESSION['user_email']);
             <span id="user_email"><?= $_SESSION['user_email'] ?></span>
         <?php else: ?>
             <a href="log_inn_side.php" id="log_in">
-                <button id="log_in_knapp">Logg inn</button>
+                <button id="login_knapp">Logg inn</button>
             </a>
         <?php endif; ?>
         <img src="bilder/ikoner/Hamburger_icon.svg.png" alt="Hamburger_icon" id="Hamburger_icon">
