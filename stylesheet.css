@@ -1,72 +1,70 @@
-html, body{
+html, body {
     width: 100%;
     margin: 0;
 }
-/* dette er nav baren */
+
+/* Nav bar */
 .topp {
     width: 100%;
     height: 40px;
     margin: 0;
     background-color: rgb(70, 100, 60);
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-columns: repeat(8, 1fr); /* Bruk repeat() for enklere kolonnedefinisjon */
     grid-template-rows: 1fr;
-}
-#bruker_ikon {
-    grid-column-start:9 ;
-    width: 35px;
-    height: 35px;
-    margin: 3px;
+    align-items: center; /* Sentrer innhold vertikalt */
 }
 
-#log_in_knapp {
-    grid-column-start:8 ;
-    grid-row-start: 1;
-    margin: 3px;
+#bruker_ikon, #sok_ikon, #Hamburger_icon {
+    width: 35px;
     height: 35px;
-    margin-bottom: 6px;
+    margin: 0 auto; /* Sentere ikoner horisontalt */
+}
+
+#log_in {
+    grid-column-start: 8;
+    display: flex; /* Bruk flexbox for bedre kontroll over knappens utseende */
+    align-items: center;
+    justify-content: center;
+    height: 35px;
     background: #303030b2;
     color: #3ea6ff;
     border-radius: 20px;
     text-align: center;
+    padding: 0 10px; /* Legg til litt polstring for plass til tekst */
+    box-sizing: border-box;
+}
+#log_in_knapp {
+    margin-top: 10px;
 }
 
-#sok_ikon{
-    grid-column-start:2;
-    grid-row-start: 1;
-    margin-top: 3px;
-    margin-left: 140px;
-    height: 35px;
-    padding-top: 2px;
+#sok_ikon {
+    grid-column-start: 2;
 }
-/*søke fungsjonen*/
-#sok-gruppe{
-    grid-column-start:3 ;
+
+#sok-gruppe {
+    grid-column-start: 3;
     grid-column-end: 6;
-    grid-row-start: 1;
-    display: block;
-    margin-top: 3px;
+    display: flex;
+    align-items: center;
     height: 35px;
-    padding-top: 2px;
 }
-    #searchInputID{
-        width: 200px;
-        height: 26px;
-    }
-    #searchButtonID{
-        width: 90px;
-        height: 32px;
-        text-transform: uppercase;
-    }
 
-#Hamburger_icon{
-    grid-column-start:1;
-    grid-row-start: 1;
-    margin-top: 3px;
-    width: 35px;
-    height: 35px;
-    padding-top: 2px;
+#searchInputID {
+    width: 200px;
+    height: 26px;
 }
+
+#searchButtonID {
+    width: 90px;
+    height: 32px;
+    text-transform: uppercase;
+}
+
+#Hamburger_icon {
+    grid-column-start: 1;
+}
+
 /*dettet er hvor bildene er i ett grid*/
 .hoved {
     height: 100%;

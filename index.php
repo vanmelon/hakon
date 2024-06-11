@@ -15,23 +15,23 @@ $loggedIn = isset($_SESSION['user_email']);
     <script src="mus-over-bilde.js"></script>
 </head>
 <body>
-    <!-- Nav bar -->
-    <div class="topp">
-        <img src="bilder/ikoner/bruker.png" alt="bruker_icon" id="bruker_ikon">
-        <img src="bilder/ikoner/sok.png" alt="søk_knap" id="sok_ikon">
-        <div id="sok-gruppe">
-            <input type="text" id="searchInputID" placeholder="Søk etter blomst">
-            <button id="searchButtonID">Søk</button>
-        </div>
-        <?php if ($loggedIn): ?>
-            <span id="user_email"><?= $_SESSION['user_email'] ?></span>
-        <?php else: ?>
-            <a href="log_inn_side.php" id="log_in">
-                <button id="log_in_knapp">Logg inn</button>
-            </a>
-        <?php endif; ?>
-        <img src="bilder/ikoner/Hamburger_icon.svg.png" alt="Hamburger_icon" id="Hamburger_icon">
+<!-- Nav bar -->
+<div class="topp">
+    <img src="bilder/ikoner/Hamburger_icon.svg.png" alt="Hamburger_icon" id="Hamburger_icon">
+    <img src="bilder/ikoner/sok.png" alt="søk_knap" id="sok_ikon">
+    <div id="sok-gruppe">
+        <input type="text" id="searchInputID" placeholder="Søk etter blomst">
+        <button id="searchButtonID">Søk</button>
     </div>
+    <?php if ($loggedIn): ?>
+        <span id="user_email"><?= $_SESSION['user_email'] ?></span>
+    <?php else: ?>
+        <a href="log_inn_side.php" id="log_in">
+            <button id="log_in_knapp">Logg inn</button>
+        </a>
+    <?php endif; ?>
+    <img src="bilder/ikoner/bruker.png" alt="bruker_icon" id="bruker_ikon">
+</div>
 
     <!-- Grid system -->
     <div class="hoved">
