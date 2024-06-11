@@ -7,11 +7,10 @@
     <body>
         <div class="topnav">
             <a class="active" href="#home">Home</a>
-            <a href="#about">News</a>
-            <a href="#about">Blog</a>
-            <a href="#about">Gallery</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+            <a href="#about" id="soke_felt">
+                <input type="text" id="searchInputID" placeholder="Søk etter blomst">
+                <button id="searchButtonID">Søk</button>
+            </a>
   <div class="login-container">
     <form action="/action_page.php">
       <button type="submit">Login</button>
@@ -57,10 +56,13 @@
    color: white;
  }
 
- .img {
-    width: 50% ;
-    height: 50% ;
- }
+#soke_felt {
+    position: fixed;
+    left: 45%;
+    margin-left: -100px;
+    width: 250px;
+    margin-top: -4px;
+}
   
  .topnav .login-container {
   float: right;
@@ -86,12 +88,7 @@
   font-size: 17px;
   border: none;
   cursor: pointer;
-}
- 
-.topnav .login-container button:hover {
-  background: #ccc;
-}
-  
+} 
  </style>
     </body>
 </html>
