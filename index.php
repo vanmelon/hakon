@@ -26,8 +26,8 @@ $loggedIn = isset($_SESSION['user_email']);
         <?php if ($loggedIn): ?>
             <span id="user_email"><?= $_SESSION['user_email'] ?></span>
         <?php else: ?>
-            <a href="login.php" id="log_in">
-                <button>Logg inn</button>
+            <a href="log_inn_side.php" id="log_in">
+                <button id="log_in_knapp">Logg inn</button>
             </a>
         <?php endif; ?>
         <img src="bilder/ikoner/Hamburger_icon.svg.png" alt="Hamburger_icon" id="Hamburger_icon">
@@ -48,7 +48,7 @@ $loggedIn = isset($_SESSION['user_email']);
 
         <div class="test_1" onmouseover="bigImg(this)&textOverBildet()" onmouseout="normalImg(this)&textOverBildet()" id="margeritt">
             <h1>349 kr</h1>
-            <img src="bilder/blomster/margeritt_blå.png" alt="margeritt">
+            <img src="bilder/blomster/margeritt_bla.png" alt="margeritt">
             <footer>
                 <div class="textOverBildetCLASS">
                     <h2>Margeritt</h2>

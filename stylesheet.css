@@ -19,7 +19,7 @@ html, body{
     margin: 3px;
 }
 
-#log_inn {
+#log_in_knapp {
     grid-column-start:8 ;
     grid-row-start: 1;
     margin: 3px;
