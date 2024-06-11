@@ -1,4 +1,4 @@
-/* Spesifikk styling for login siden */
+/* Container for forms */
 .login-container {
     background-color: #fff;
     padding: 20px;
@@ -6,7 +6,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 300px;
-    margin: 100px auto; /* Sentraliserer login containeren */
+    margin: 100px auto;
 }
 
 .login-form h2 {
@@ -34,7 +34,7 @@
 .login-form input[type="submit"] {
     padding: 10px 20px;
     color: #fff;
-    background: linear-gradient(to right, #1a2412, #568203, #3f704d); /* Gradient bakgrunn */
+    background: linear-gradient(to right, #3f704d, #568203, #3f704d); /* Gradient bakgrunn */
     border: none;
     border-radius: 25px; /* Runde hjørner */
     cursor: pointer;
@@ -42,7 +42,7 @@
 }
 
 .login-form input[type="submit"]:hover {
-    background: linear-gradient(to right, #729c4f, #6da504, #4e9a63); /* Reversert gradient på hover */
+    background: linear-gradient(to right, #729c4f, #6da504, #729c4f); /* Reversert gradient på hover */
 }
 
 .login-form p {
@@ -58,3 +58,43 @@
 .login-form p a:hover {
     text-decoration: underline;
 }
+
+
+/* kryss i hjørne */
+        #close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            background-color: #fff;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        #close-button:hover {
+            background-color: #eee;
+        }
+
+        #close-button::before,
+        #close-button::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 15px;
+            background-color: #333;
+        }
+
+        #close-button::before {
+            transform: rotate(45deg);
+        }
+
+        #close-button::after {
+            transform: rotate(-45deg);
+        }

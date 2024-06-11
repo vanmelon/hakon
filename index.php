@@ -10,7 +10,7 @@ $loggedIn = isset($_SESSION['user_email']);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blomster Butikk</title>
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
     <script src="js/soke-knapp.js"></script>
     <script src="js/mus-over-bilde.js"></script>
 </head>

@@ -6,8 +6,10 @@
     <title>Registrering</title>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/login.css">
+    
 </head>
 <body>
+    <div id="close-button" onclick="goToIndex()"></div>
     <div class="login-container">
         <form method="post" class="login-form">
             <h2>Registrer deg</h2>
@@ -65,5 +67,11 @@
         }
     }
     ?>
+
+    <script>
+        function goToIndex() {
+            window.location.href = "index.php";
+        }
+    </script>
 </body>
 </html>
