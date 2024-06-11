@@ -162,3 +162,74 @@ html, body{
 .test_10 { grid-column: 2; grid-row: 4; }
 .test_11 { grid-column: 3; grid-row: 4; }
 .test_12 { grid-column: 4; grid-row: 4; }
+
+/* log inn side */
+/* CSS for the login form */
+#login_body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #5a009d; /* Purple background color */
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px; /* Fixed width for the form */
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: left;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: calc(100% - 20px); /* Adjusted width to fit padding */
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.login-form input[type="submit"] {
+    padding: 10px 20px;
+    color: #fff;
+    background: linear-gradient(to right, #ff0000, #ff8800, #ffdd00); /* Gradient background */
+    border: none;
+    border-radius: 25px; /* Rounded corners */
+    cursor: pointer;
+    width: 100%;
+}
+
+.login-form input[type="submit"]:hover {
+    background: linear-gradient(to right, #ffdd00, #ff8800, #ff0000); /* Reverse gradient on hover */
+}
+
+.login-form p {
+    margin-top: 20px;
+    color: #333;
+}
+
+.login-form p a {
+    color: #ff8800; /* Color for the signup link */
+    text-decoration: none;
+}
+
+.login-form p a:hover {
+    text-decoration: underline;
+}
