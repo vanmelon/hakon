@@ -36,7 +36,7 @@ Hvilke spesifikasjoner du burde ha på serveren/containeren din for å kjøre pr
 * Sett opp en database og et table på SQL-serveren.
 * Endre PHP-filene med brukernavn, passord, serveradresse, databasenavn og tablenavn etter det som stemmer med det du har satt opp.
 
-![Server spesifikasjoner](eksamenSpecs.png)
+![Server spesifikasjoner]([eksamenSpecs.png](https://github.com/vanmelon/hakon/blob/main/bilder/eksamenSpecs.png))
 <br><br>
 ## Brukerstøtte
 1. Hva er det første du ser når siden laster inn?
