@@ -6,7 +6,6 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-
 // Angi databasedetaljene her
 $servername = "localhost";
 $username = "hakon";
@@ -21,17 +20,18 @@ try {
 catch(PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
 }
+
 // registrering av ny bruker
 if (isset($_POST['register'])) {
     $epost = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-    $password = password_hash(filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING), PASSWORD_BCRYPT);
+    $password = password_hash(filter_input(INPUT_POST, 'passord', FILTER_SANITIZE_STRING), PASSWORD_BCRYPT);
     
     try {
         if(empty($epost) || empty($password)){
             echo 'Fyll inn alle felter';
         } else {
             // sjekker om epost finnes
-            $sth = $pdo->prepare('SELECT * FROM prosjektledere WHERE epost = ?');
+            $sth = $pdo->prepare('SELECT * FROM brukere WHERE epost = ?');
             $sth->execute([$epost]);
             $user = $sth->fetch(PDO::FETCH_ASSOC);
 
@@ -39,10 +39,10 @@ if (isset($_POST['register'])) {
                 echo "Eposten er allerede i bruk.";
             } else {
                 // Oppretter ny bruker
-                $sth = $pdo->prepare('INSERT INTO prosjektledere (epost, passord) VALUES (?, ?)');
+                $sth = $pdo->prepare('INSERT INTO brukere (epost, passord) VALUES (?, ?)');
                 if ($sth->execute([$epost, $password])) {
                     // Brukeren ble registrert, omdiriger til en annen side for å unngå form re-submission
-                    header("Location: etterRegistrering.php");
+                    header("Location: index.php");
                     exit;
                 }
             }
