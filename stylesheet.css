@@ -10,21 +10,21 @@ html, body {
     margin: 0;
     background-color: rgb(70, 100, 60);
     display: grid;
-    grid-template-columns: repeat(8, 1fr); /* Bruk repeat() for enklere kolonnedefinisjon */
+    grid-template-columns: repeat(8, 1fr); 
     grid-template-rows: 1fr;
-    align-items: center; /* Sentrer innhold vertikalt */
+    align-items: center; 
 }
 
 #bruker_ikon {
     width: 35px;
     height: 35px;
-    margin: 0 auto; /* Sentere ikoner horisontalt */
+    margin: 0 auto; 
     grid-column-start: 8;
 }
 
 #log_in {
     grid-column-start: 7;
-    display: flex; /* Bruk flexbox for bedre kontroll over knappens utseende */
+    display: flex; 
     align-items: center;
     justify-content: center;
     height: 35px;
@@ -32,7 +32,7 @@ html, body {
     color: #3ea6ff;
     border-radius: 20px;
     text-align: center;
-    padding: 0 10px; /* Legg til litt polstring for plass til tekst */
+    padding: 0 10px; 
     box-sizing: border-box;
 }
 #log_in_knapp {

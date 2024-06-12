@@ -51,6 +51,7 @@ if (isset($_POST['login'])) {
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
+        <!-- denne gjør scriptet på bunnen -->
     <div id="close-button" onclick="goToIndex()"></div>
     <div class="login-container">
         <form method="post" class="login-form">
@@ -61,7 +62,7 @@ if (isset($_POST['login'])) {
             <p>har ikke bruker? <a href="registrering.php">registrering</a></p>
         </form>
     </div>
-
+    <!-- krysset i gjørne -->
 <script>
     function goToIndex() {
         window.location.href = "index.php";

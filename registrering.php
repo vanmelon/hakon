@@ -27,6 +27,7 @@ if (isset($_POST['register'])) {
     $password = password_hash(filter_input(INPUT_POST, 'passord', FILTER_SANITIZE_STRING), PASSWORD_BCRYPT);
     
     try {
+        // hvis noen av felten er tomme send meling
         if(empty($epost) || empty($password)){
             echo 'Fyll inn alle felter';
         } else {
@@ -72,7 +73,7 @@ if (isset($_POST['register'])) {
             <input type="submit" name="register" value="Registrer">
         </form>
     </div>
-
+        <!-- krysset i gjørne -->
     <script>
         function goToIndex() {
             window.location.href = "index.php";

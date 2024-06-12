@@ -50,6 +50,7 @@ $loggedIn = isset($_SESSION['user_email']);
 
 
     <!-- Grid system -->
+    <!-- dette er alle bilden som vise i siden -->
     <div class="hoved">
         <div class="bilde" onmouseover="bigImg(this)&textOverBildet()" onmouseout="normalImg(this)&textOverBildet()" id="orkide">
             <h1>699 kr</h1>
