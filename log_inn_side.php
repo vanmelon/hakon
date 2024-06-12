@@ -1,28 +1,58 @@
-<?php
-session_start();
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Anta at brukeren har logget inn riktig etter en POST-forespørsel
-    $email = $_POST['email'];
-    $_SESSION['user_email'] = $email;
-
-    // Omled til hovedsiden
-    header('Location: index.php');
-    exit();
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Logg Inn</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login-side</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-    <form action="login.php" method="POST">
-        <label for="email">E-post:</label>
-        <input type="email" id="email" name="email" required>
-        <button type="submit">Logg inn</button>
-    </form>
+    <div id="close-button" onclick="goToIndex()"></div>
+    <div class="login-container">
+        <form method="post" class="login">
+            <h2>Login</h2>
+            <label>E-post eller Mobil <input type="email" name="epost" required></label>
+            <label>Passord <input type="password" name="password" required></label>
+            <input type="submit" name="login" value="Login">
+            <p>har ikke bruker? <a href="registrering.php">login</a></p>
+        </form>
+    </div>
+
+    <?php
+    session_start();
+
+    // kobler til databasen
+    $user = "hakon";
+    $password = "Tskjorte73";
+    $database = "blomsterbutikk";
+    $table = "brukere";
+
+    // brukeren logger seg inn
+    if (isset($_POST['login'])) {
+        $epost = filter_input(INPUT_POST, 'epost', FILTER_SANITIZE_EMAIL);
+        $passord = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+        // sjekker om at eposten finnes
+        $sth = $pdo->prepare('SELECT * FROM prosjektledere WHERE epost = ?');
+        $sth->execute([$epost]);
+        $user = $sth->fetch(PDO::FETCH_ASSOC);
+        // sjekker om både epost og passord matcher det i databasen
+        if ($user && password_verify($passord, $user['passord'])) {
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['user_epost'] = $user['epost'];
+            header("Location: dashboard.php");
+            exit;
+            // hvis brukeren skrev noe feil 
+        } else {
+            echo "Feil brukernavn eller passord.";
+        }
+    }
+    ?>
+
+<script>
+        function goToIndex() {
+            window.location.href = "index.php";
+        }
+    </script>
 </body>
 </html>
