@@ -7,7 +7,7 @@
     <body>
         <div class="topnav">
             <a class="active" href="#home">Home</a>
-            <a href="#about" id="soke_felt">
+            <a id="soke_felt">
                 <input type="text" id="searchInputID" placeholder="Søk etter blomst">
                 <button id="searchButtonID">Søk</button>
             </a>
