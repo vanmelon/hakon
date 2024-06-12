@@ -11,27 +11,43 @@ $loggedIn = isset($_SESSION['user_email']);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blomster Butikk</title>
     <link rel="stylesheet" href="stylesheet.css">
-    <script src="soke-knapp.js"></script>
-    <script src="mus-over-bilde.js"></script>
+    <script src="js/soke-knapp.js"></script>
+    <script src="js/mus-over-bilde.js"></script>
 </head>
 <body>
 <!-- Nav bar -->
 <div class="topp">
-    <img src="bilder/ikoner/Hamburger_icon.svg.png" alt="Hamburger_icon" id="Hamburger_icon">
-    <img src="bilder/ikoner/sok.png" alt="søk_knap" id="sok_ikon">
+    <!-- Søkefelt -->
     <div id="sok-gruppe">
         <input type="text" id="searchInputID" placeholder="Søk etter blomst">
         <button id="searchButtonID">Søk</button>
     </div>
-    <?php if ($loggedIn): ?>
-        <span id="user_email"><?= $_SESSION['user_email'] ?></span>
-    <?php else: ?>
-        <a href="log_inn_side.php" id="log_in">
-            <button id="log_in_knapp">Logg inn</button>
-        </a>
-    <?php endif; ?>
+
+    <!-- Velkomstmelding og innloggings-/utloggingsknapp -->
+    <?php
+    session_start();
+    if (isset($_SESSION['user_epost'])) {
+        // Hvis brukeren er logget inn, vis en velkomstmelding og en "Logg ut" -knapp
+        echo '<h1 id="velkomstmeling">Velkommen, ' . $_SESSION['user_epost'] . '</h1>';
+        echo '<div id="user_actions">
+                <a href="log_ut.php" id="log_ut">
+                    <button id="log_in_knapp">Logg ut</button>
+                </a>
+            </div>';
+    } else {
+        // Hvis brukeren ikke er logget inn, vis en "Logg inn" -knapp
+        echo '<div id="user_actions">
+                <a href="log_inn_side.php" id="log_in">
+                    <button id="log_in_knapp">Logg inn</button>
+                </a>
+            </div>';
+    }
+    ?>
+
+    <!-- Brukerikon -->
     <img src="bilder/ikoner/bruker.png" alt="bruker_icon" id="bruker_ikon">
 </div>
+
 
     <!-- Grid system -->
     <div class="hoved">
